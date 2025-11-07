@@ -87,7 +87,12 @@ Your car folder should now look something like this:
 * Now click `Copy Car Assets To Game`. This will take your car package and config files associated with it and copy them over to your game's directory so they are ready to be used in-game
 * Open the CMS Car Editor and select your car there. Here you can properly set up mostly everything about the car itself. Here, the QoL Mod is very useful as it extends the editor features and provides you with a lot of useful information. Make sure to periodically click `Save` in the bottom left corner as you make changes - **there is no autosave**
 * In the bottom right corner you will find buttons to generate images for the car thumbnail and the car parts. Click them both
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b0bc6928-5749-4f09-93da-2977c81c82e0" />
+
 * Now you are ready to open the game itself and find your car here. For testing the QoL Mod comes to the rescue again, allowing you to spawn the last edited car right in the garage
+
+
 
 # :oncoming_automobile: Extras
 ## Fixing textures
@@ -104,6 +109,8 @@ There is a total of 4 config files that we are using
 4. `parts.txt` - This file defines prices for the car's body parts. To be able to appear in the in-game part shop the part must be defined here and must have a price above 0. EasyCMS generates a price of 300 credits for each valid part found in the model file
 
 ## Openable panels
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d755cda7-0517-42be-8228-9a45a4ab89ea" />
+
 Openable panels are separate objects set up in a slightly different way from other body parts. Here, working in Blender will be referenced specifically, working in other software may be different.
 To make openable doors, hoods, trunks etc. one must first separate these panels from the body. Liberate use of the `L` key when in face edit mode in Blender helps quickly select large surfaces, however be careful that the parts of the panels that go inside panel gaps aren't usually picked up by this. With other more complex objects the X-Ray mode (default hotkey: `Alt-Z` or can be found as a button in the top right corner) paired with box or circle select (`B` or `C` hotkeys respectively) can help. Temporarily hiding faces with `H` can help get other faces out of the way so you don't accidentally select them along with the faces you want, you can unhide them again with `Alt-H`
 
