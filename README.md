@@ -1,3 +1,5 @@
+<img width="617" height="275" alt="easyCMSLogo" src="https://github.com/user-attachments/assets/f18e8d27-e5bf-49e1-aaea-fd2a1b026c8b" />
+
 # :wrench: EasyCMS
 EasyCMS is a toolset created to simplify porting Automation creations exported to BeamNG to Car Mechanic Simulator 2021. The tool automates porting BeamNG materials to Unity HDRP materials and manages Asset Bundle creation and exporting to CMS
 # :stop_sign: Limitations
@@ -16,11 +18,27 @@ Before we proceed to the installation and usage guides, let us go over things Ea
 * An image editor with support for DDS (.dds) files
 # :building_construction: Setup
 1. Create a Unity 3D project and open it
-2. In the top tool panel, go into `Window > Package Manager`
-3. In the Package Manager window, find the `Packages` selection at the top and change it to `Unity Registry`
-4. Find `High Definition RP` and install it. Once installed, it will prompt you to set it up, click through all the buttons with warnings next to them
-5. Click the plus button in the top left corner of the Package Manager and select `Add package from git URL...`
+2. In the top tool panel, go into `Window > Package Manager` 
+
+<img width="960" height="516" alt="image" src="https://github.com/user-attachments/assets/23f5cd53-3a99-4ed3-b385-ccfbdcd561d1" />
+
+3. In the Package Manager window, find the `Packages` selection at the top and change it to `Unity Registry` 
+
+<img width="800" height="567" alt="image" src="https://github.com/user-attachments/assets/1e2a8a8b-edc6-4ef2-b00b-cab993ffac6f" />
+
+4. Find `High Definition RP` and install it. Once installed, it will prompt you to set it up, click through all the buttons with warnings next to them 
+
+<img width="898" height="638" alt="image" src="https://github.com/user-attachments/assets/2897b0f2-3c95-4668-9cff-1f5822e1bf64" /> <img width="500" height="567" alt="image" src="https://github.com/user-attachments/assets/fd7a9a1d-30ec-4d1b-99fb-c440dc068a2a" />
+
+5. Click the plus button in the top left corner of the Package Manager and select `Add package from git URL...` 
+
+<img width="800" height="567" alt="image" src="https://github.com/user-attachments/assets/448e01e4-d981-4ed8-93f2-9ea70b8f7e89" />
+
 6. Put `com.unity.nuget.newtonsoft-json` into the created box and click add
+
+<img width="800" height="567" alt="image" src="https://github.com/user-attachments/assets/4b3a6920-48e3-4844-846e-e8328714db0d" />
+
+
 7. Download the latest EasyCMS release from the `Releases` section in this GitHub repository
 8. Merge the `Assets` folder from the EasyCMS download with the `Assets` folder in your Unity project's directory
 # :blue_car: Usage
@@ -34,12 +52,20 @@ First, let's prepare the Automation car itself. Make sure your car does not use 
 * Right-click inside this folder and select `Create > EasyCMS > Car Manager` (do not mistake the `EasyCMS` option for `Create > EasyCMS`). This will create the core manager for your car, you can name this file anything you want
 * Select the newly created `Car Manager` file, fill out the `CMS Executable` field with the path to your CMS's .exe file (you can click the `...` button next to it to open a file dialog). You should only need to do this once, any Car Managers you create after will look for other Car Managers and copy this path on creation
 * Now fill out the `BeamNG Materials` path with the path to your car's `[UID].materials.json` file. By default, this is located in `C:\Users\[USER]\AppData\Local\BeamNG\BeamNG.drive\current\mods\unpacked\[MOD NAME]\vehicles\[CAR NAME]`
+
+<img width="366" height="530" alt="image" src="https://github.com/user-attachments/assets/e1c93039-4d68-4d58-acb1-645ceb4df74a" />
+
+
 * Once both paths are set up, click through all of the buttons in the `Import` section in order. This will copy the materials file and the textures related to it from your car and then build Unity HDRP materials from them
 
 > [!NOTE]
 > When you import the textures, you will likely see a lot of import errors. A lot of textures used by the Autobeam cars are not using a format/compression that Unity supports. This is not critical - the car will work without them, however the textures will not. If you want the textures to work - you will have to fix them manually with image editing software. You can find information about doing so [further](#fixing-textures) in the guide
 
 * Once materials are built, you will see `Paint_[X]` assets created in your car's folder. These files are created for each of the paint slots found in the materials file. You can use these to change the paint of the car. This cannot be done in the game, so this is where you decide on the color and the paint parameters. In the `Materials` folder you will also find all materials imported form the materials file, you can edit each one separately here if you so desire
+
+<img width="365" height="273" alt="image" src="https://github.com/user-attachments/assets/20bbe452-861a-4301-a88b-16bff21015f8" />
+
+
 ## Car model setup
 * Open your 3D editing software of choice and import the car's model file from the exported files. By default this will be in `C:\Users\[USER]\AppData\Local\BeamNG\BeamNG.drive\current\mods\unpacked\[MOD NAME]\vehicles\[CAR NAME]\[UID]\[UID]_bodymesh.dae`. In Blender, make sure not to import the same car multiple times in one project as this will mess up the material names
 * As per CMS requirements, there need to be at least 2 model files: `model.fbx` - containing all the models of the car excluding alternate body parts, and `collider.fbx` - containing just one model for the collider. Let's start with the `model.fbx` file
@@ -49,6 +75,10 @@ First, let's prepare the Automation car itself. Make sure your car does not use 
 * Now let's create the collider model. In Blender, it is a good idea to create a separate collection for it. For a quick and simple collider we can simply create a cube and size it to the car's dimensions. Remember to apply transforms on it again if you sized it in object mode. The name of the new object must be `collider`
 * Export the collider model to `Assets/Cars/[CAR NAME]/collider.fbx`. Once again make sure to export only the collider, not the entire car with it
 * Now in Unity, you can drag the car out of the filesystem into the scene to make sure the model exported correctly and that materials correctly applied to it. This is also where you can find if any materials are wrong and can adjust them with a good reference
+
+Your car folder should now look something like this:
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/f991cefe-e79d-4745-802f-aebfddf48547" />
+
 ## Generating configs
 * Navigate to the `Car Manager` object for your car and click through the buttons in the `Templates` section. This will generate all config files required and used by CMS with EasyCMS templates that you can edit later. Instead of generating the `Car Config` (`config.txt`), you can grab one from the game files off a car that closer matches the car you are  porting. CMS car files can be found in `Car Mechanic Simulator 2021\Car Mechanic Simulator 2021_Data\StreamingAssets\Cars`. We will talk about what each config file does in a [further section](#config-files)
 * Later you will likely edit these inside the game files, the `Updating Configs` section of the `Car Manager` can bring your project's config files up to date with the ones in your game files (exporting the car to the game files will also prompt you for this if applicable)
