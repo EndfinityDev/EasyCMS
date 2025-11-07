@@ -56,6 +56,7 @@ First, let's prepare the Automation car itself. Make sure your car does not use 
 * Once ready to export the car to CMS, first click `Build Asset Bundle`. This will create the package that contains your car models so they can be loaded into CMS
 * Now click `Copy Car Assets To Game`. This will take your car package and config files associated with it and copy them over to your game's directory so they are ready to be used in-game
 * Open the CMS Car Editor and select your car there. Here you can properly set up mostly everything about the car itself. Here, the QoL Mod is very useful as it extends the editor features and provides you with a lot of useful information. Make sure to periodically click `Save` in the bottom left corner as you make changes - **there is no autosave**
+* In the bottom right corner you will find buttons to generate images for the car thumbnail and the car parts. Click them both
 * Now you are ready to open the game itself and find your car here. For testing the QoL Mod comes to the rescue again, allowing you to spawn the last edited car right in the garage
 
 # :oncoming_automobile: Extras
