@@ -56,11 +56,12 @@ First, let's prepare the Automation car itself. Make sure your car does not use 
 * Once ready to export the car to CMS, first click `Build Asset Bundle`. This will create the package that contains your car models so they can be loaded into CMS
 * Now click `Copy Car Assets To Game`. This will take your car package and config files associated with it and copy them over to your game's directory so they are ready to be used in-game
 * Open the CMS Car Editor and select your car there. Here you can properly set up mostly everything about the car itself. Here, the QoL Mod is very useful as it extends the editor features and provides you with a lot of useful information. Make sure to periodically click `Save` in the bottom left corner as you make changes - **there is no autosave**
-* Now you are ready to open the game itself and find your car here. For testing the QoL mod comes to the rescue again, allowing you to spawn the last edited car right in the garage
+* Now you are ready to open the game itself and find your car here. For testing the QoL Mod comes to the rescue again, allowing you to spawn the last edited car right in the garage
 
 # :oncoming_automobile: Extras
 ## Fixing textures
 Simply speaking, you will encounter 2 types of textures: color and monochrome
+
 To fix DDS color textures all you need to do is import the texture into image editing software that supports various DDS compressions and re-export the texture with DXT5 compression, overwriting the original file. Preferably do this inside the Unity project so you don't have to repeat the import process
 
 Monochrome textures are similar but require an intermediate step. These use color for transparency instead of making use of the actual alpha channel. We need to remove everything in the color black from the image so there is transparency in its place before exporting the texture to DXT5
