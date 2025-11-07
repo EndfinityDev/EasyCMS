@@ -32,7 +32,7 @@ First, let's prepare the Automation car itself. Make sure your car does not use 
 ## Set up the car project inside the Unity project
 * In the Unity Editor's filesystem at the bottom, go to `Assets/Cars` and create a new folder for your car. The name of the folder will be the internal name of your car
 * Right-click inside this folder and select `Create > EasyCMS > Car Manager` (do not mistake the `EasyCMS` option for `Create > EasyCMS`). This will create the core manager for your car, you can name this file anything you want
-* Select the newly created `Car Manager` file, fill out the `CMS Executable` field with the path to your CMS's .exe file(you can click the `...` button next to it to open a file dialog). You should only need to do this once, any Car Managers you create after will look for other Car Managers and copy this path on creation
+* Select the newly created `Car Manager` file, fill out the `CMS Executable` field with the path to your CMS's .exe file (you can click the `...` button next to it to open a file dialog). You should only need to do this once, any Car Managers you create after will look for other Car Managers and copy this path on creation
 * Now fill out the `BeamNG Materials` path with the path to your car's `[UID].materials.json` file. By default, this is located in `C:\Users\[USER]\AppData\Local\BeamNG\BeamNG.drive\current\mods\unpacked\[MOD NAME]\vehicles\[CAR NAME]`
 * Once both paths are set up, click through all of the buttons in the `Import` section in order. This will copy the materials file and the textures related to it from your car and then build Unity HDRP materials from them
 
