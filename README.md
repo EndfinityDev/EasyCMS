@@ -2,6 +2,9 @@
 
 # :wrench: EasyCMS
 EasyCMS is a toolset created to simplify porting Automation creations exported to BeamNG to Car Mechanic Simulator 2021. The tool automates porting BeamNG materials to Unity HDRP materials and manages Asset Bundle creation and exporting to CMS
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/27d6f4c0-b220-4d12-9369-5c2d499c4ec1" />
+
 # :stop_sign: Limitations
 Before we proceed to the installation and usage guides, let us go over things EasyCMS **cannot** do:
 * EasyCMS does not manage the models outside of generating configs based on imported materials. The models have to be set up manually to the requirements of CMS
