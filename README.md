@@ -51,6 +51,7 @@ Before we proceed to the installation and usage guides, let us go over things Ea
 7. Download the latest EasyCMS release from the `Releases` section in this GitHub repository
 8. Merge the `Assets` folder from the EasyCMS download with the `Assets` folder in your Unity project's directory
 # :blue_car: Usage
+While the guide below seems rather long, the process to making a basic working car can take approximately 5-10 minutes
 ## Car setup
 First, let's prepare the Automation car itself. Make sure your car does not use modded materials that do not support exporting
 * Remove the steering wheel and the seats. Car Mechanic Simulator adds its own
