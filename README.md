@@ -20,7 +20,7 @@ Before we proceed to the installation and usage guides, let us go over things Ea
 * Because EasyCMS materials are mostly transparent to support Automation cutouts, some objects may appear through these materials
 # :spiral_notepad: Prerequisites
 * An installed instance of the Unity 2020.3 editor
-* A reference of the CMS21 modding PDF Guide `Car Mechanic Simulator 2021\ModdingTools\PDFGuides\Car Mechanic Simulator 2021 Car Modding Guide.pdf`. (You do not need to install CMS modding tools for Unity)
+* A reference of the CMS21 modding PDF Guide `Car Mechanic Simulator 2021\ModdingTools\PDFGuides\Car Mechanic Simulator 2021 Car Modding Guide.pdf` (You do **not** need to install CMS modding tools for Unity)
 * 3D editing software that supports Collada (.dae) and FBX (.fbx) files (Blender recommended)
 ## Also recommended
 * QoL Mod for CMS21
@@ -125,7 +125,7 @@ There is a total of 4 config files that we are using
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d755cda7-0517-42be-8228-9a45a4ab89ea" />
 
 Openable panels are separate objects set up in a slightly different way from other body parts. Here, working in Blender will be referenced specifically, working in other software may be different.
-To make openable doors, hoods, trunks etc. one must first separate these panels from the body. Liberate use of the `L` key when in face edit mode in Blender helps quickly select large surfaces, however be careful that the parts of the panels that go inside panel gaps aren't usually picked up by this. With other more complex objects the X-Ray mode (default hotkey: `Alt-Z` or can be found as a button in the top right corner) paired with box or circle select (`B` or `C` hotkeys respectively) can help. Temporarily hiding faces with `H` can help get other faces out of the way so you don't accidentally select them along with the faces you want, you can unhide them again with `Alt-H`
+To make openable doors, hoods, trunks etc. one must first separate these panels from the body. Liberate use of the `L` key when in face edit mode in Blender helps quickly select large surfaces, however be wary that the parts of the panels that go inside panel gaps are not usually picked up by this. With other more complex objects the X-Ray mode (default hotkey: `Alt-Z` or can be found as a button in the top right corner) paired with box or circle select (`B` or `C` hotkeys respectively) can help. Temporarily hiding faces with `H` can help get other faces out of the way so you don't accidentally select them along with the faces you want, you can unhide them again with `Alt-H`
 
 Making the panels open correctly gets a bit weird. First, you need to set the object's origin point to the point around which the panel will rotate. The fastest (although inaccurate) way to do this is to `Shift-Right Click` on the point where you want the origin to be, this will set the 3D cursor to that point, then bring up the search menu (default hotkey: `F3`) and find and click `Origin to 3D Cursor` with the object selected. But we are not done yet, the axis needs to be set up in an unintuitive way
 
