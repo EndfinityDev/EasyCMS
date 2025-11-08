@@ -20,7 +20,7 @@ Before we proceed to the installation and usage guides, let us go over things Ea
 * Because EasyCMS materials are mostly transparent to support Automation cutouts, some objects may appear through these materials
 # :spiral_notepad: Prerequisites
 * An installed instance of the Unity 2020.3 editor
-* A reference of the CMS21 modding PDF Guide `Car Mechanic Simulator 2021\ModdingTools\PDFGuides\Car Mechanic Simulator 2021 Car Modding Guide.pdf`
+* A reference of the CMS21 modding PDF Guide `Car Mechanic Simulator 2021\ModdingTools\PDFGuides\Car Mechanic Simulator 2021 Car Modding Guide.pdf`. (You do not need to install CMS modding tools for Unity)
 * 3D editing software that supports Collada (.dae) and FBX (.fbx) files (Blender recommended)
 ## Also recommended
 * QoL Mod for CMS21
