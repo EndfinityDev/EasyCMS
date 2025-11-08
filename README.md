@@ -74,7 +74,7 @@ First, let's prepare the Automation car itself. Make sure your car does not use 
 > [!NOTE]
 > When you import the textures, you will likely see a lot of import errors. A lot of textures used by the Autobeam cars are not using a format/compression that Unity supports. This is not critical - the car will work without them, however the textures will not. If you want the textures to work - you will have to fix them manually with image editing software. You can find information about doing so [further](#fixing-textures) in the guide
 
-* Once materials are built, you will see `Paint_[X]` assets created in your car's folder. These files are created for each of the paint slots found in the materials file. You can use these to change the paint of the car. This cannot be done in the game, so this is where you decide on the color and the paint parameters. In the `Materials` folder you will also find all materials imported form the materials file, you can edit each one separately here if you so desire
+* Once materials are built, you will see `Paint_[X]` assets created in your car's folder. These files are created for each of the paint slots found in the materials file. You can use these to change the paint of the car. This cannot be done in the game, so this is where you decide on the color and the paint parameters. In the `Materials` folder you will also find all materials imported from the materials file, you can edit each one separately here if you so desire
 
 <img width="365" height="273" alt="image" src="https://github.com/user-attachments/assets/20bbe452-861a-4301-a88b-16bff21015f8" />
 
