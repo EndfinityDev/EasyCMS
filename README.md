@@ -25,31 +25,12 @@ Before we proceed to the installation and usage guides, let us go over things Ea
 ## Also recommended
 * QoL Mod for CMS21
 * An image editor with support for DDS (.dds) files
+
 # :building_construction: Setup
-1. Create a Unity 3D project and open it
-2. In the top tool panel, go into `Window > Package Manager` 
+1. Download the latest EasyCMS Template release from the `Releases` section in this GitHub repository
+2. Unpack the archive
+3. Open Unity and add the unpacked folder as a project. Make sure the selected folder has folders named `Assets`, `Library`, `ProjectSettings` etc. immediately inside it
 
-<img width="960" height="516" alt="image" src="https://github.com/user-attachments/assets/23f5cd53-3a99-4ed3-b385-ccfbdcd561d1" />
-
-3. In the Package Manager window, find the `Packages` selection at the top and change it to `Unity Registry` 
-
-<img width="800" height="567" alt="image" src="https://github.com/user-attachments/assets/1e2a8a8b-edc6-4ef2-b00b-cab993ffac6f" />
-
-4. Find `High Definition RP` and install it. Once installed, it will prompt you to set it up, click through all the buttons with warnings next to them 
-
-<img width="898" height="638" alt="image" src="https://github.com/user-attachments/assets/2897b0f2-3c95-4668-9cff-1f5822e1bf64" /> <img width="500" height="567" alt="image" src="https://github.com/user-attachments/assets/fd7a9a1d-30ec-4d1b-99fb-c440dc068a2a" />
-
-5. Click the plus button in the top left corner of the Package Manager and select `Add package from git URL...` 
-
-<img width="800" height="567" alt="image" src="https://github.com/user-attachments/assets/448e01e4-d981-4ed8-93f2-9ea70b8f7e89" />
-
-6. Put `com.unity.nuget.newtonsoft-json` into the created box and click add
-
-<img width="800" height="567" alt="image" src="https://github.com/user-attachments/assets/4b3a6920-48e3-4844-846e-e8328714db0d" />
-
-
-7. Download the latest EasyCMS release from the `Releases` section in this GitHub repository
-8. Merge the `Assets` folder from the EasyCMS download with the `Assets` folder in your Unity project's directory
 # :blue_car: Usage
 While the guide below seems rather long, the process to making a basic working car can take approximately 5-10 minutes
 ## Car setup
