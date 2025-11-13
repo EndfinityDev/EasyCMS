@@ -13,6 +13,8 @@ public class CarPaintSO : ScriptableObject
     public float Roughness;
     [Range(0.0f, 1.0f)]
     public float Clearcoat;
+    public Color BackfaceColor;
+    [Range(0.0f, 1.0f)]
 
     public List<Material> TargetMaterials = new List<Material>();
 
@@ -26,6 +28,7 @@ public class CarPaintSO : ScriptableObject
             material.SetFloat("_Metallic", Metallic);
             material.SetFloat("_Roughness", Roughness);
             material.SetFloat("_ClearCoat", Clearcoat);
+            material.SetColor("_BackfaceColor", BackfaceColor);
         }
     }
 #endif
