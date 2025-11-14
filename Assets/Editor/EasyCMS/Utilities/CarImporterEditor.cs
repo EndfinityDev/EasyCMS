@@ -32,7 +32,9 @@ public class CarImporterEditor : Editor
         ImportNameFromGame,
         ImportConfigFromGame,
         ImportBodyConfigFromGame,
-        ImportPartsConfigFromGame
+        ImportPartsConfigFromGame,
+
+        StripDDSMipMaps
     }
 
     private void OnEnable()
@@ -129,6 +131,13 @@ public class CarImporterEditor : Editor
         }
         EditorGUILayout.Separator();
 
+        EditorGUILayout.LabelField("Textures");
+        if (GUILayout.Button("2.5. Strip DDS Mip Maps"))
+        {
+            pressedButton = PressedButton.StripDDSMipMaps;
+        }
+        EditorGUILayout.Separator();
+
         // Doing this here so it doesn't throw stupid GUI errors
         switch (pressedButton)
         {
@@ -182,6 +191,10 @@ public class CarImporterEditor : Editor
             case PressedButton.ImportBodyConfigFromGame:
             case PressedButton.ImportPartsConfigFromGame:
                 CopyFileFromGame(pressedButton);
+                break;
+
+            case PressedButton.StripDDSMipMaps:
+                StripDDS();
                 break;
         }
 
@@ -237,6 +250,7 @@ public class CarImporterEditor : Editor
             return;
         }
         ImportMaterialJSon.CopyTextures(Path.GetDirectoryName(m_CarImporter.BeamNGMaterialsPath), AssetDatabase.GetAssetPath(m_CarImporter.MaterialsFile));
+        Debug.LogWarning("Textures that failed to import may be fixed with tools in the \"Textures\" section of the Car Importer");
     }
 
     void BuildMaterials()
@@ -333,6 +347,22 @@ public class CarImporterEditor : Editor
 
         AssetCopying.CopyFileFromGame(fileName, assetsPath, m_CarImporter.CMSExePath);
         EditorUtility.DisplayDialog("Import Successful", $"File \"{fileName}\" has been copied to the project files", "Ok");
+    }
+
+    void StripDDS()
+    {
+        string carImporterPath = AssetDatabase.GetAssetPath(m_CarImporter);
+        string[] splitPath = carImporterPath.Split('/');
+        string carImporterFolder = "";
+        for (int i = 0; i < splitPath.Length - 1; i++) { carImporterFolder = Path.Combine(carImporterFolder, splitPath[i]); }
+        string absoluteTextureFolderPath = Path.Combine(Path.GetDirectoryName(Application.dataPath), carImporterFolder, "Textures");
+        if(!Directory.Exists(absoluteTextureFolderPath))
+        {
+            EditorUtility.DisplayDialog("Error", $"Could not find Textures directory", "Ok");
+            return;
+        }
+        StripDDSMipMaps.StripAll(absoluteTextureFolderPath);
+        EditorUtility.DisplayDialog("Strip Complete", $"DDS files have been stripped of mip maps where applicable. Please right-click your texture files and select \"Reimport\". If you've built materials previously - you should rebuild them again", "Ok");
     }
 }
 #endif
