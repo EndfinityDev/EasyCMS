@@ -14,7 +14,7 @@ EasyCMS is a toolset created to simplify porting Automation creations exported t
 # :stop_sign: Limitations
 Before we proceed to the installation and usage guides, let us go over things EasyCMS **cannot** do:
 * EasyCMS does not manage the models outside of generating configs based on imported materials. The models have to be set up manually to the requirements of CMS
-* EasyCMS does not fix textures unsupported by Unity
+* EasyCMS cannot fix some textures unsupported by Unity
 * Materials created by EasyCMS do not utilize CMS material features such as painting, rust, dust, dents or light functions
 * Glass parts do not get cut out fully, some glass reflection effects remain on parts of glass that are supposed to be cut out
 * Because EasyCMS materials are mostly transparent to support Automation cutouts, some objects may appear through these materials
@@ -47,13 +47,12 @@ First, let's prepare the Automation car itself. Make sure your car does not use 
 * Select the newly created `Car Manager` file, fill out the `CMS Executable` field with the path to your CMS's .exe file (you can click the `...` button next to it to open a file dialog). You should only need to do this once, any Car Managers you create after will look for other Car Managers and copy this path on creation
 * Now fill out the `BeamNG Materials` path with the path to your car's `[UID].materials.json` file. By default, this is located in `C:\Users\[USER]\AppData\Local\BeamNG\BeamNG.drive\current\mods\unpacked\[MOD NAME]\vehicles\[CAR NAME]`
 
-<img width="366" height="530" alt="image" src="https://github.com/user-attachments/assets/e1c93039-4d68-4d58-acb1-645ceb4df74a" />
+<img width="367" height="576" alt="image" src="https://github.com/user-attachments/assets/07191859-a47a-40f0-a700-142c3895d357" />
 
-
-* Once both paths are set up, click through all of the buttons in the `Import` section in order. This will copy the materials file and the textures related to it from your car and then build Unity HDRP materials from them
+* Once both paths are set up, click through all of the buttons in the `Import` section in order. This will copy the materials file and the textures related to it from your car and then build Unity HDRP materials from them.
 
 > [!NOTE]
-> When you import the textures, you will likely see a lot of import errors. A lot of textures used by the Autobeam cars are not using a format/compression that Unity supports. This is not critical - the car will work without them, however the textures will not. If you want the textures to work - you will have to fix them manually with image editing software. You can find information about doing so [further](#fixing-textures) in the guide
+> When you import the textures, you will likely see a lot of import errors. Some of the textures used by the Autobeam cars are not automatically supported in this version of Unity. This is not critical and the car itself will work with these import errors. Since EasyCMS 1.2 a tool to attempt to fix these textures is included at the bottom of the Car Manager, labeled as `2.5. Strip DDS Mip Maps`. This tool is better used before building materials as after using this feature you will have to rebuild them. You can find information about fixing textures manually [further](#fixing-textures) in the guide
 
 * Once materials are built, you will see `Paint_[X]` assets created in your car's folder. These files are created for each of the paint slots found in the materials file. You can use these to change the paint of the car. This cannot be done in the game, so this is where you decide on the color and the paint parameters. In the `Materials` folder you will also find all materials imported from the materials file, you can edit each one separately here if you so desire
 
@@ -92,7 +91,7 @@ Your car folder should now look something like this:
 ## Fixing textures
 Simply speaking, you will encounter 2 types of textures: color and monochrome
 
-To fix DDS color textures all you need to do is import the texture into image editing software that supports various DDS compressions and re-export the texture with DXT5 compression, overwriting the original file. Preferably do this inside the Unity project so you don't have to repeat the import process
+To fix DDS color textures all you need to do is import the texture into image editing software that supports various DDS compressions and re-export the texture with DXT5 compression (most reliable) and no mip maps, overwriting the original file. Preferably do this inside the Unity project so you don't have to repeat the import process
 
 Monochrome textures are similar but require an intermediate step. These use color for transparency instead of making use of the actual alpha channel. We need to remove everything in the color black from the image so there is transparency in its place before exporting the texture to DXT5
 ## Config files
