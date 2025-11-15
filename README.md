@@ -14,7 +14,7 @@ EasyCMS is a toolset created to simplify porting Automation creations exported t
 # :stop_sign: Limitations
 Before we proceed to the installation and usage guides, let us go over things EasyCMS **cannot** do:
 * EasyCMS does not manage the models outside of generating configs based on imported materials. The models have to be set up manually to the requirements of CMS
-* EasyCMS does not fix textures unsupported by Unity
+* EasyCMS cannot fix some textures unsupported by Unity
 * Materials created by EasyCMS do not utilize CMS material features such as painting, rust, dust, dents or light functions
 * Glass parts do not get cut out fully, some glass reflection effects remain on parts of glass that are supposed to be cut out
 * Because EasyCMS materials are mostly transparent to support Automation cutouts, some objects may appear through these materials
