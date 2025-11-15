@@ -147,9 +147,9 @@ public static class StripDDSMipMaps
         byte[] newMipBytes = BitConverter.GetBytes(newMipCount);
         Buffer.BlockCopy(newMipBytes, 0, ddsData, mipOffset, sizeof(int));
 
-        int newdwFlags = dwFlags | 0x20000;
-        byte[] newdwFlagsBytes = BitConverter.GetBytes(newdwFlags);
-        Buffer.BlockCopy(newdwFlagsBytes, 0, ddsData, dwFlagsOffset, sizeof(int));
+        //int newdwFlags = dwFlags | 0x20000;
+        //byte[] newdwFlagsBytes = BitConverter.GetBytes(newdwFlags);
+        //Buffer.BlockCopy(newdwFlagsBytes, 0, ddsData, dwFlagsOffset, sizeof(int));
 
         byte[] newDDSData = ddsData.Take(i).ToArray();
         File.WriteAllBytes(absFilePath, newDDSData);

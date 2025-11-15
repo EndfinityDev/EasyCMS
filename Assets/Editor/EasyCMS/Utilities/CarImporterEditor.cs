@@ -362,7 +362,7 @@ public class CarImporterEditor : Editor
             return;
         }
         StripDDSMipMaps.StripAll(absoluteTextureFolderPath);
-        EditorUtility.DisplayDialog("Strip Complete", $"DDS files have been stripped of mip maps where applicable. Please right-click your texture files and select \"Reimport\". If you've built materials previously - you should rebuild them again", "Ok");
+        EditorUtility.DisplayDialog("Strip Complete", $"DDS files have been stripped of mip maps where applicable. Please select all textures, right-click them and hit \"Reimport\"", "Ok");
     }
 }
 #endif
